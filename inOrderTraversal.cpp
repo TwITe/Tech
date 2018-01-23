@@ -18,8 +18,9 @@ shared_ptr<treeNode> newNode(int data) {
 }
 
 void printInOrder(const shared_ptr<treeNode>& node) {
-    if (node == nullptr)
+    if (node == nullptr) {
         return;
+    }
 
     printInOrder(node->left);
 
