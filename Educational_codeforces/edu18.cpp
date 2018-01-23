@@ -30,7 +30,6 @@ void solve1() { // Problem A
             x = l;
         }
     }
-
     cout << x << " " << cnt;
 }
 
@@ -75,7 +74,6 @@ void solve2() { //Problem B
         }
     }
 }
-
 
 string v;
 
@@ -168,13 +166,6 @@ void solve3() { //Problem C
     }
 }
 
-struct TreeNode {
-    double data; // ключ/данные
-    TreeNode *left; // указатель на левого потомка
-    TreeNode *right; // указатель на правого потомка
-};
-
-
 void solve4() { //Problem D
     ull n, q;
     cin >> n >> q;
@@ -237,6 +228,6 @@ int main() {
     //solve1();
     //solve2();
     //solve3();
-    solve4();
+    //solve4();
     return 0;
 }
