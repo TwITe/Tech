@@ -62,6 +62,7 @@ int main() {
     for (int i = 0; i < T; i++) {
         int n;
         cin >> n;
+
         shared_ptr<treeNode> root = nullptr;
         for (int j = 0; j < n; j++) {
             int v, data;
@@ -71,9 +72,9 @@ int main() {
             if (j == 0) {
                 root = newNode(v);
             }
+
             inserted = false;
             insertNode(root, v, data, c);
-
         }
         cout << endl;
         printInOrder(root);
