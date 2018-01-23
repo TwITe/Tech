@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-using ll = long long;
-using ull = unsigned long long;
+#define ll long long
+#define ull unsigned long long
 
 void solve1() { // Problem A
     ios::sync_with_stdio(false);
@@ -176,37 +176,67 @@ struct TreeNode {
 
 
 void solve4() { //Problem D
-    ll n, q;
+    ull n, q;
     cin >> n >> q;
 
-//    for (int i = 0; i < q; i++) {
-//        ll u;
-//        string s;
-//        cin >> u >> s;
-//
-//    }
-}
+    for (int i = 0; i < q; i++) {
+        ull u;
+        string s;
+        cin >> u >> s;
+        ull ans = u;
+        for (auto c : s) {
+            bitset<64> num2(ans);
+            int k = 0;
+            int j = 0;
+            while (num2[j] != 1) {
+                j++;
+                k++;
+            }
 
-
-struct Node {
-    int data;
-    Node* left;
-    Node* right;
-};
-
-void inOrder(Node* root) {
-    if (root == nullptr) {
-        return;
+            if (c == 'L') {
+                if (k == 0) {
+                    continue;
+                }
+                else {
+                    ull m = 1ull << (k - 1);
+                    ans -= m;
+                }
+            }
+            else if (c == 'R') {
+                if (k == 0) {
+                    continue;
+                }
+                else {
+                    ull m = 1ull << (k - 1);
+                    ans += m;
+                }
+            }
+            else {
+                ull m = 1ull << k;
+                ull div1 = 1ull << (k + 1);
+                ull div2 = 1ull << (k + 2);
+                ull ans1 = ans + m;
+                if (ans1 % div1 == 0 && ans1 % div2 != 0) {
+                    if (ans1 <= n) {
+                        ans = ans1;
+                    }
+                    else {
+                        continue;
+                    }
+                }
+                else {
+                    ans -= m;
+                }
+            }
+        }
+        cout << ans << endl;
     }
-    inOrder(root->left);
-    cout << root->data << " ";
-    inOrder(root->right);
 }
 
 int main() {
     //solve1();
     //solve2();
     //solve3();
-    //solve4();
+    solve4();
     return 0;
 }
