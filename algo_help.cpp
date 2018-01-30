@@ -27,6 +27,17 @@
 //    return d;
 //}
 
+//bool find_any_solution (int a, int b, int c, int& x0, int& y0, int& g) { //Решение диофантовых уравнений
+//    g = gcd(abs(a), abs(b), x0, y0);
+//    if (c % g != 0)
+//        return false;
+//    x0 *= c / g;
+//    y0 *= c / g;
+//    if (a < 0) x0 *= -1;
+//    if (b < 0) y0 *= -1;
+//    return true;
+//}
+
 //void dfs1(int node, int prev, int c) {
 //    int cnt = 0;
 //    for (int i: v[node]) {
@@ -150,3 +161,27 @@
 //    }
 //    return false;
 //}
+
+//----------------------
+//long num multiplicaion
+
+//read long num
+//for (int i = (int) s.length(); i > 0; i--) {
+//a.push_back(atoi(s.substr(i - 1, 1).c_str()));
+//}
+
+//multiplication
+//int carry = 0;
+//for (size_t i = 0; i < a.size() || carry; i++) {
+//if (i == a.size()) {
+//a.push_back(0);
+//}
+//long long cur = carry + a[i] * b;
+//a[i] = int(cur % base);
+//carry = int(cur / base);
+//}
+
+//while (a.size() > 1 && a.back() == 0) {
+//a.pop_back();
+//}
+//----------------------
