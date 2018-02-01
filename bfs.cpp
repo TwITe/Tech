@@ -51,7 +51,7 @@ void bfs_search_dist_and_path(int u) {
 //Кратчайшие пути от вершины
 const int INF = 1e+9;
 
-vector< pair<int, int> > g[LIM]; // В g[u] лежит список пар: (длина пути между вершиной u и v, вершина v)
+vector<pair<int, int>> g[LIM]; // В g[u] лежит список пар: (длина пути между вершиной u и v, вершина v)
 
 void shortcut(int u) {
     fill(dist, dist + n, INF);
@@ -74,7 +74,6 @@ void shortcut(int u) {
 }
 
 int main() {
-    //bfs(0);
-    priority_queue< pair<int, int>, vector< pair<int, int> >, greater< pair<int, int> > > q;
+    bfs(0);
     return 0;
 }

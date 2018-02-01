@@ -160,28 +160,4 @@
 //        }
 //    }
 //    return false;
-//}
-
-//----------------------
-//long num multiplicaion
-
-//read long num
-//for (int i = (int) s.length(); i > 0; i--) {
-//a.push_back(atoi(s.substr(i - 1, 1).c_str()));
-//}
-
-//multiplication
-//int carry = 0;
-//for (size_t i = 0; i < a.size() || carry; i++) {
-//if (i == a.size()) {
-//a.push_back(0);
-//}
-//long long cur = carry + a[i] * b;
-//a[i] = int(cur % base);
-//carry = int(cur / base);
-//}
-
-//while (a.size() > 1 && a.back() == 0) {
-//a.pop_back();
-//}
-//----------------------
+//}-----------
